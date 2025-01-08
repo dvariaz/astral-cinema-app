@@ -9,8 +9,9 @@ on:
       - main
 
 jobs:
-  build:
-    runs-on: self-hosted
+  scan:
+    name: Scan
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
 
@@ -24,7 +25,7 @@ jobs:
           npm i -g yarn
           yarn
 
-      - name: Run linter && test coverage
+      - name: Run linter & Tests Coverage
         run: yarn lint && yarn test:coverage
       
       - name: SonarQube Scan
