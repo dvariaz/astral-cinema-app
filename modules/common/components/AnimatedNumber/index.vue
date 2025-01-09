@@ -20,7 +20,7 @@ const numberWithLeadingZeros = computed(() => {
     <Transition name="scroll">
       <span :key="numberWithLeadingZeros" class="inline-block text-8xl font-light">{{
         numberWithLeadingZeros
-        }}</span>
+      }}</span>
     </Transition>
   </div>
 </template>
@@ -51,7 +51,6 @@ export default {
 
 .scroll-enter-active,
 .scroll-leave-active {
-  position: relative;
   transition: transform 1s ease;
 }
 </style>
