@@ -18,7 +18,7 @@ const currentMovie = computed(() => {
   return props.movies[currentIndex.value];
 });
 
-const genres = computed(() => {
+const genresHumanizedText = computed(() => {
   if (!currentMovie.value) return '';
 
   return currentMovie.value.genres.join(', ');
@@ -50,7 +50,7 @@ class="billboard-hero flex flex-col justify-end bg-black bg-cover bg-center bg-s
           <h1 class="text-6xl font-bold mb-4">{{ currentMovie.title }}</h1>
           <p class="font-light text-sm pl-2">
             <span class="font-bold">Genre: </span>
-            {{ genres }}
+            {{ genresHumanizedText }}
           </p>
         </div>
       </div>
