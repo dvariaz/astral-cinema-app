@@ -1,18 +1,19 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { shallowMount, type VueWrapper } from '@vue/test-utils';
 
-import BillboardHero from '@/modules/billboard/components/BillboardHero/index.vue';
+import MovieCover from '@/modules/movies/components/MovieCover/index.vue';
 
 const props = {
-  movies: [],
-};
+  title: 'Movie Title',
+  imageUrl: 'https://example.com/image.jpg'
+}
 
-describe('Billboard Components', () => {
-  describe('BillboardHero', () => {
+describe('Movies Components', () => {
+  describe('MovieCover', () => {
     let wrapper: VueWrapper<any>;
 
     beforeEach(() => {
-      wrapper = shallowMount(BillboardHero, { props });
+      wrapper = shallowMount(MovieCover, { props });
     });
 
     afterEach(() => {
@@ -24,5 +25,5 @@ describe('Billboard Components', () => {
         expect(wrapper.vm).toBeDefined();
       });
     });
-  });
-});
+  })
+})
