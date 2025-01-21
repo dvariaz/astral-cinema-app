@@ -25,7 +25,8 @@ const genres = computed(() => {
 });
 </script>
 <template>
-  <div class="billboard-hero flex flex-col justify-end bg-black bg-cover bg-center bg-scale-100" :style="{
+  <div
+class="billboard-hero flex flex-col justify-end bg-black bg-cover bg-center bg-scale-100" :style="{
     backgroundImage: `linear-gradient(
       rgba(0, 0, 0, 0) 40%,
       rgba(0, 0, 0, 0.7) 70%
@@ -57,7 +58,8 @@ const genres = computed(() => {
       <div class="col-span-8 pb-20">
         <ul class="movie-covers-list flex gap-8 overflow-x-scroll">
           <li v-for="(movie, index) in movies" :key="movie.id">
-            <MovieCover class="w-[300px]" :title="movie.title" :image-url="movie.posterPath"
+            <MovieCover
+class="w-[300px]" :title="movie.title" :image-url="movie.posterPath"
               @click="currentIndex = index" />
           </li>
         </ul>
