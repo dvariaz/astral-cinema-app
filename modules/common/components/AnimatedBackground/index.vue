@@ -23,7 +23,7 @@ onMounted(() => {
     <TransitionGroup name="fade-and-scale">
       <img
 v-for="(image, index) in props.allImages" v-show="index === props.currentImageIndex" :key="image"
-        :src="image" :alt="`Background ${index + 1}`" class="absolute top-0 left-0 w-full h-full object-cover" />
+        :src="image" :alt="`Background image ${index + 1}`" class="absolute top-0 left-0 w-full h-full object-cover" />
     </TransitionGroup>
 
     <div class="animated-background__overlay absolute top-0 left-0 w-full h-full z-10" />
