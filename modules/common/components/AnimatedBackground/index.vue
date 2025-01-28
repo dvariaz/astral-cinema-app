@@ -26,6 +26,7 @@ onMounted(() => {
         v-show="index === props.currentImageIndex"
         :key="image"
         :src="image"
+        :alt="`Background image ${index + 1}`"
         class="absolute top-0 left-0 w-full h-full object-cover" />
     </TransitionGroup>
 
